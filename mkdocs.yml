@@ -1,0 +1,7 @@
+site_name: YoloFlet
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings

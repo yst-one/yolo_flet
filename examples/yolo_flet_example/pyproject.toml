@@ -1,0 +1,54 @@
+[project]
+name = "yolo-flet-example"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Flet developer", email = "you@example.com" }
+]
+dependencies = [
+    "yolo-flet",
+    "flet>=0.85.3",
+    "opencv-python>= 4.12.0.8",
+]
+
+[dependency-groups]
+dev = [
+    "flet-cli>=0.85.3",
+    "flet-desktop>=0.85.3",
+    "flet-web>=0.85.3",
+]
+
+[tool.flet]
+# org name in reverse domain name notation, e.g. "com.mycompany".
+# Combined with project.name to build bundle ID for iOS and Android apps
+org = "com.mycompany"
+
+# project display name that is used as an app title on Android and iOS home screens,
+# shown in window titles and about app dialogs on desktop.
+product = "yolo-flet-example"
+
+# company name to display in about app dialogs
+company = "Flet"
+
+# copyright text to display in about app dialogs
+copyright = "Copyright (C) 2026 by MyCompany"
+
+source_packages = ["ncnn"]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true
+
+[tool.flet.android]
+target_arch=["arm64-v8a"]
+
+[tool.flet.app]
+path = "src"
+
+[tool.flet.dev_packages]
+yolo-flet = "../.." # relative path
+
+[tool.uv.sources]
+yolo-flet = { path = "../../", editable = true }

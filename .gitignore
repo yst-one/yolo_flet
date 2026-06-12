@@ -1,0 +1,5 @@
+.venv
+build/*
+docs/*
+examples/.venv
+examples/build
