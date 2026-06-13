@@ -22,9 +22,7 @@ jobs:
         # 顺便开启缓存功能，这样以后每次编译只要几秒钟
         enable-cache: true
     - name: 编译生成 WHL 包
-      run: |
-        rm -rf dist/*
-        uv build
+      run: uv build
         
     - name: 保存编译产物
       uses: actions/upload-artifact@v6
