@@ -1,7 +1,7 @@
 on:
   # 💡 就是这行！加上它，GitHub 网页上就会立刻出现手动运行的按钮
   workflow_dispatch:
-  pull_request:
+  pull:
     branches:
     - main
     - master
