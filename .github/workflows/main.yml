@@ -27,3 +27,9 @@ jobs:
       with:
         name: yolo-flet-whl-packages
         path: dist/
+
+    # 4. 使用 uv 的发布功能，一秒钟推送到 PyPI 官方
+    - name: 发布到 PyPI
+      run: |
+        # 使用刚才在 GitHub 密室里存的钥匙进行安全认证
+        uv publish --token ${{ secrets.PYPI_API_TOKEN }}
