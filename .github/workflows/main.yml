@@ -16,7 +16,7 @@ jobs:
 
       # 2. 调用 Astral 官方的 uv 插件（自动安装最新版 uv，并自动配置好 Python 环境）
     - name: 设置 UV 环境
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@v6
       with:
         # 顺便开启缓存功能，这样以后每次编译只要几秒钟
         enable-cache: true
