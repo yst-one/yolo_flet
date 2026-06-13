@@ -1,0 +1,27 @@
+on:
+  pull_request:
+    branches:
+    - main
+jobs:
+  my_job:
+    name: build_whl_update
+    runs-on: ubuntu-22.04
+
+    steps:
+    # 1. 把你 GitHub 仓库里的代码下载到这台虚拟电脑上
+    - name: 签出代码
+      uses: actions/checkout@v4
+
+      # 2. 调用 Astral 官方的 uv 插件（自动安装最新版 uv，并自动配置好 Python 环境）
+    - name: 设置 UV 环境
+      uses: astral-sh/setup-uv@v5
+      with:
+        # 顺便开启缓存功能，这样以后每次编译只要几秒钟
+        enable-cache: true
+    - name: 编译生成 WHL 包
+      run: uv build
+    - name: 保存编译产物
+      uses: actions/upload-artifact@v4
+      with:
+        name: yolo-flet-whl-packages
+        path: dist/
