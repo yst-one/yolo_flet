@@ -12,7 +12,7 @@ jobs:
     steps:
     # 1. 把你 GitHub 仓库里的代码下载到这台虚拟电脑上
     - name: 签出代码
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
       # 2. 调用 Astral 官方的 uv 插件（自动安装最新版 uv，并自动配置好 Python 环境）
     - name: 设置 UV 环境
@@ -23,7 +23,7 @@ jobs:
     - name: 编译生成 WHL 包
       run: uv build
     - name: 保存编译产物
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: yolo-flet-whl-packages
         path: dist/
