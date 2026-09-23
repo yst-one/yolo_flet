@@ -1,1 +1,1 @@
-from yolo_flet.yolo_flet import YoloFlet
+from yolo_flet.yolo_flet import YoloService

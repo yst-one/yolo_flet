@@ -7,8 +7,8 @@ class Extension extends FletExtension {
   @override
   FletService? createService(Control control) {
     switch (control.type) {
-      case "YoloFlet":
-        return YoloFletControl(control: control);
+      case "YoloService":
+        return YoloService(control: control);
       default:
         return null;
     }

@@ -11,7 +11,7 @@ dependencies:
   flet: ^0.85.3
   flutter:
     sdk: flutter
-  ultralytics_yolo: ^0.6.2
+  ultralytics_yolo: ^0.6.10
 
   # your dependencies here
 

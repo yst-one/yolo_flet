@@ -27,6 +27,10 @@ Issues = "https://github.com/MyGithubAccount/yolo-flet/issues"
 [tool.setuptools.package-data]
 "flutter.yolo_flet" = ["**/*"]
 
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true
+
 [tool.setuptools]
 license-files = []
 
