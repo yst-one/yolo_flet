@@ -29,7 +29,7 @@ dependencies = [
 
 Build your app:
 ```
-flet build macos -v
+flet build apk -v
 ```
 
 ## Documentation
